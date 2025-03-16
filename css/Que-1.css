@@ -1,0 +1,45 @@
+body {
+  font-family: Arial, sans-serif;
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+}
+h1 {
+  text-align: center;
+  margin-top: 50px;
+  color: palevioletred;
+}
+.line-1 {
+  display: flex;
+  /* justify-content: space-around; */
+  align-items: center;
+  margin-left: 25px;
+}
+.man-container {
+  position: relative;
+  width: 13%;
+  height: 200px;
+  padding: 0;
+  /* margin-top: 100px; */
+}
+.man {
+  position: absolute;
+  bottom: 0;
+  width: 100px;
+}
+.letter {
+  position: absolute;
+  left: 100px;
+  top: 50px;
+  font-size: 20px;
+  font-weight: bold;
+  color: teal;
+  cursor: pointer;
+}
+.house {
+  position: absolute;
+  width: 190px;
+  height: 150px;
+  top: 22%;
+  left: 80%;
+}
