@@ -3,12 +3,17 @@ body {
   padding: 0;
   background-color: #36474f;
 }
+h1 {
+  text-align: center;
+  margin-top: 50px;
+  color: white;
+}
 .main-container {
   display: flex;
   flex-direction: column;
   align-items: center;
   justify-content: center;
-  height: 70vh;
+  height: 50vh;
 }
 hr {
   width: 665px;
