@@ -1,0 +1,98 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Document</title>
+    <style>
+      body {
+        font-family: Arial, sans-serif;
+        margin: 0;
+        padding: 0;
+        box-sizing: border-box;
+      }
+      h1 {
+        text-align: center;
+        margin-top: 50px;
+        color: palevioletred;
+      }
+      .line-1 {
+        display: flex;
+        /* justify-content: space-around; */
+        align-items: center;
+        margin-left: 25px;
+      }
+      .man-container {
+        position: relative;
+        width: 13%;
+        height: 200px;
+        padding: 0;
+        /* margin-top: 100px; */
+      }
+      .man {
+        position: absolute;
+        bottom: 0;
+        width: 100px;
+      }
+      .letter {
+        position: absolute;
+        left: 100px;
+        top: 50px;
+        font-size: 20px;
+        font-weight: bold;
+        color: teal;
+      }
+      .house {
+        position: absolute;
+        width: 190px;
+        height: 150px;
+        top: 22%;
+        left: 80%;
+      }
+    </style>
+  </head>
+  <body>
+    <h1>JS Que</h1>
+
+    <div class="container">
+      <div class="line-1">
+        <div class="man-container">
+          <img src="/assets/image/running-man.gif" alt="man" class="man" />
+          <span class="letter">A</span>
+        </div>
+
+        <div class="man-container">
+          <img src="/assets/image/running-man.gif" alt="man" class="man" />
+          <span class="letter">B</span>
+        </div>
+
+        <div class="man-container">
+          <img src="/assets/image/running-man.gif" alt="man" class="man" />
+          <span class="letter">C</span>
+        </div>
+
+        <div class="man-container">
+          <img src="/assets/image/running-man.gif" alt="man" class="man" />
+          <span class="letter">D</span>
+        </div>
+
+        <div class="man-container">
+          <img src="/assets/image/running-man.gif" alt="man" class="man" />
+          <span class="letter">E</span>
+        </div>
+
+        <div class="man-container">
+          <img src="/assets/image/running-man.gif" alt="man" class="man" />
+          <span class="letter">F</span>
+        </div>
+      </div>
+
+      <div class="line-2">
+        <div class="house-container">
+          <img src="/assets/image/house.gif" alt="house" class="house" />
+        </div>
+      </div>
+    </div>
+    <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.7.1/jquery.min.js"></script>
+  </body>
+</html>
