@@ -1,13 +1,23 @@
-console.log("Que-1 is working...");
+console.log("Que-1 is working");
 
-$(document).ready(function () {
-  $(".letter").click(function () {
-    let letters = ["A", "B", "C", "D", "E", "F"];
-    let index = $(this).index(".letter"); // Get index of clicked letter
+let letters = ["A", "B", "C", "D", "E", "F"];
+let letterElements = $(".letter");
 
-    $(".letter").each(function (i) {
-      let newIndex = (i - index + letters.length) % letters.length;
-      $(this).text(letters[newIndex]);
-    });
+function rotateLetters() {
+  let lastLetter = letters.pop();
+  letters.unshift(lastLetter);
+
+  letterElements.each(function (index) {
+    $(this).text(letters[index]);
   });
+}
+
+let intervalId;
+
+$(".start-btn").click(function () {
+  intervalId = setInterval(rotateLetters, 1500);
+});
+
+$(".stop-btn").click(function () {
+  clearInterval(intervalId);
 });

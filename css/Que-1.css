@@ -64,7 +64,7 @@ button {
 .btn-2 {
   margin-left: 10px;
 }
-.starat-btn {
+.start-btn {
   background-color: #4caf50;
   border-radius: 25px 0px 0px 25px;
 }
@@ -72,7 +72,7 @@ button {
   background-color: #f44336;
   border-radius: 0px 25px 25px 0px;
 }
-.starat-btn:hover {
+.start-btn:hover {
   background-color: #117616;
   transform: scale(1.1);
   border: 1px solid #00ff0d;
