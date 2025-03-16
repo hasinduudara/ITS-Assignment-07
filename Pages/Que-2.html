@@ -16,7 +16,7 @@
         flex-direction: column;
         align-items: center;
         justify-content: center;
-        height: 100vh;
+        height: 70vh;
       }
       hr {
         width: 665px;
@@ -71,6 +71,44 @@
         border-radius: 5px;
         margin-left: 42%;
       }
+      button {
+        padding: 13px 40px;
+        color: #fff;
+        border: none;
+        cursor: pointer;
+        font-size: 15px;
+        transition: background-color 0.3s, transform 0.3s, border 0.3s;
+      }
+      .buttons {
+        display: flex;
+        align-items: center;
+        justify-content: center;
+        padding-bottom: 50px;
+      }
+      .btn-1 {
+        margin-right: 10px;
+      }
+      .btn-2 {
+        margin-left: 10px;
+      }
+      .starat-btn {
+        background-color: #4caf50;
+        border-radius: 0px 25px 0px 25px;
+      }
+      .stop-btn {
+        background-color: #f44336;
+        border-radius: 25px 0px 25px 0px;
+      }
+      .starat-btn:hover {
+        background-color: #117616;
+        transform: scale(1.1);
+        border: 1px solid #00ff0d;
+      }
+      .stop-btn:hover {
+        background-color: #b71c1c;
+        transform: scale(1.1);
+        border: 1px solid #ff0000;
+      }
     </style>
   </head>
   <body>
@@ -91,6 +129,15 @@
       <div class="down-box"></div>
     </div>
 
+    <div class="buttons">
+      <div class="btn-1">
+        <button class="starat-btn">Start</button>
+      </div>
+      <div class="btn-2">
+        <button class="stop-btn">Stop</button>
+      </div>
+    </div>
+
     <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.7.1/jquery.min.js"></script>
 
     <script>
@@ -104,30 +151,49 @@
           "plum",
         ];
         let index = 0;
-        setInterval(function () {
-          $(".up-box").css(
-            "background-color",
-            colors[(index + 5) % colors.length]
-          );
-          $(".box-1").css(
-            "background-color",
-            colors[(index + 4) % colors.length]
-          );
-          $(".box-2").css(
-            "background-color",
-            colors[(index + 3) % colors.length]
-          );
-          $(".box-3").css(
-            "background-color",
-            colors[(index + 2) % colors.length]
-          );
-          $(".box-4").css(
-            "background-color",
-            colors[(index + 1) % colors.length]
-          );
-          $(".down-box").css("background-color", colors[index % colors.length]);
-          index++;
-        }, 500);
+        let interval;
+
+        function startColorChange() {
+          interval = setInterval(function () {
+            $(".up-box").css(
+              "background-color",
+              colors[(index + 5) % colors.length]
+            );
+            $(".box-1").css(
+              "background-color",
+              colors[(index + 4) % colors.length]
+            );
+            $(".box-2").css(
+              "background-color",
+              colors[(index + 3) % colors.length]
+            );
+            $(".box-3").css(
+              "background-color",
+              colors[(index + 2) % colors.length]
+            );
+            $(".box-4").css(
+              "background-color",
+              colors[(index + 1) % colors.length]
+            );
+            $(".down-box").css(
+              "background-color",
+              colors[index % colors.length]
+            );
+            index++;
+          }, 500);
+        }
+
+        function stopColorChange() {
+          clearInterval(interval);
+        }
+
+        $(".starat-btn").click(function () {
+          startColorChange();
+        });
+
+        $(".stop-btn").click(function () {
+          stopColorChange();
+        });
       });
     </script>
   </body>
