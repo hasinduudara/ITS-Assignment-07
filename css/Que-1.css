@@ -50,12 +50,13 @@ button {
   cursor: pointer;
   font-size: 15px;
   transition: background-color 0.3s, transform 0.3s, border 0.3s;
+  margin-top: 100px;
+  /* border-radius: 100px; */
 }
 .buttons {
   display: flex;
   align-items: center;
   justify-content: center;
-  padding-bottom: 50px;
 }
 .btn-1 {
   margin-right: 10px;
@@ -65,11 +66,11 @@ button {
 }
 .starat-btn {
   background-color: #4caf50;
-  border-radius: 0px 25px 0px 25px;
+  border-radius: 25px 0px 0px 25px;
 }
 .stop-btn {
   background-color: #f44336;
-  border-radius: 25px 0px 25px 0px;
+  border-radius: 0px 25px 25px 0px;
 }
 .starat-btn:hover {
   background-color: #117616;
