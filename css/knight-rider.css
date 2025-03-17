@@ -1,0 +1,71 @@
+body {
+  background-color: black;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  justify-content: center;
+  height: 100vh;
+  font-family: Arial, sans-serif;
+}
+.title {
+  font-size: 24px;
+  font-weight: bold;
+  margin-bottom: 20px;
+  color: rgb(255, 54, 54);
+}
+.container {
+  display: flex;
+  gap: 5px;
+  padding: 10px;
+  border-top: 2px solid white;
+  border-bottom: 2px solid white;
+}
+.box {
+  width: 60px;
+  height: 35px;
+  background-color: white;
+  border-radius: 3px;
+}
+.button-container {
+  display: flex;
+  gap: 10px;
+  margin-top: 20px;
+}
+.start-btn {
+  padding: 10px 20px;
+  font-size: 16px;
+  background-color: blue;
+  color: white;
+  border: none;
+  border-radius: 5px;
+  cursor: pointer;
+}
+.stop-btn {
+  padding: 10px 20px;
+  font-size: 16px;
+  background-color: red;
+  color: white;
+  border: none;
+  border-radius: 5px;
+  cursor: pointer;
+}
+.start-btn:hover {
+  background-color: darkblue;
+  border: 1px solid rgb(0, 128, 255);
+}
+.stop-btn:hover {
+  background-color: darkred;
+  border: 1px solid rgb(255, 0, 0);
+}
+.start-btn,
+.stop-btn {
+  transition: background-color 0.3s, transform 0.3s, border 0.3s;
+}
+.start-btn:hover,
+.stop-btn:hover {
+  transition: transform 0.5s;
+  transform: scale(1.1);
+}
+.green-box {
+  background-color: green;
+}
